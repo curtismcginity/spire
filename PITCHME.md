@@ -1,13 +1,13 @@
-# The Modern Professor
-### An Entrpreneur of Ideas
+## The Modern Professor
+###### An Entrpreneur of Ideas
 
-###by Dr. Curtis McGinity
+by Dr. Curtis McGinity
 
 ---
 
-# First, the obvious:
+## First, the obvious:
 
-* The future of work is in *wielding* ai dynamically.
+* The future of work is in **wielding** ai dynamically.
 	1. we must deal in machine-readable formats
 	1. modularization will become second-nature
 
@@ -15,8 +15,8 @@
 
 ---
 
-# Are you fluent in basic SQL?
+## Are you fluent in basic SQL?
 
-![Video](https://www.youtube.com/watch?v=px6DcFh6pj0)
+![Video](https://www.youtube.com/embed/px6DcFh6pj0)
 
 ---
