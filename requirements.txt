@@ -1,5 +1,7 @@
 backports.shutil-get-terminal-size==1.0.0
+brotlipy==0.7.0
 certifi==2017.7.27.1
+cffi==1.11.1
 chardet==3.0.4
 configparser==3.5.0
 dj-database-url==0.4.2
@@ -14,6 +16,7 @@ pathlib==1.0.1
 pew==1.0.0
 pipenv==8.2.6
 pycodestyle==2.3.1
+pycparser==2.18
 pyflakes==1.5.0
 pytz==2017.2
 requests==2.18.4
@@ -24,3 +27,4 @@ Theano==0.8.2
 urllib3==1.22
 virtualenv==15.0.3
 virtualenv-clone==0.2.6
+whitenoise==3.3.1
