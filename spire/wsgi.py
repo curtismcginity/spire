@@ -15,8 +15,8 @@ from whitenoise.django import DjangoWhiteNoise
 
 # from dj_static import Cling
 
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "spire.settings")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "prompt.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "spire.settings")
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "prompt.settings")
 
 # application = Cling(get_wsgi_application())
 application = DjangoWhiteNoise(get_wsgi_application())
