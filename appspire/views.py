@@ -1,11 +1,11 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-	return render_to_response('index.html')
+	return render(request,'appspire/templates/index.html')
 
 def about(request):
-	return render_to_response('about.html')
+	return render(request,'appspire/templates/about.html')
 
 def contact(request):
-        return render_to_response('contact.html')
+        return render(request,'appspire/templates/contact.html')
