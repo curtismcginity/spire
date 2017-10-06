@@ -1,1 +1,1 @@
-web: gunicorn spire.wsgi:appspire --log-file -
+web: gunicorn spire.wsgi:application --log-file -
