@@ -16,7 +16,13 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = ['appspire.herokuapp.com']
+ALLOWED_HOSTS = [
+    'hidden-dawn-44622.herokuapp.com',
+    '.hidden-dawn-44622.com',
+    '.spire.com',
+    'appspire.herokuapp.com',
+    '.appspire.com',
+]
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -28,7 +34,7 @@ STATIC_URL = '/static/'
 
 # for static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT,'static'),
+    os.path.join(PROJECT_ROOT,'static/'),
 )
 
 
@@ -46,9 +52,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 SECRET_KEY = 'n=mup+@!w49l!21xn@k0=g$14h^kd0fis-@apr!ycss4a@@mtl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -96,7 +101,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'spire.wsgi.application'
+from spire.wsgi import application as app
+WSGI_APPLICATION = spire.wsgi.app
+
+#WSGI_APPLICATION = 'spire.wsgi.application'
 
 
 # Database
@@ -109,8 +117,10 @@ DATABASES = {
 }
 
 # Change 'default' database configuration with $DATABASE_URL.
-DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
-
+# DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
