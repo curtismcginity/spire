@@ -55,6 +55,9 @@ SECRET_KEY = 'n=mup+@!w49l!21xn@k0=g$14h^kd0fis-@apr!ycss4a@@mtl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+from configurations import Configuration
+class DevConIV(Configuration):
+    DEBUG = True
 
 
 # Application definition
@@ -104,7 +107,7 @@ TEMPLATES = [
 
 # from spire.wsgi import application as app
 # WSGI_APPLICATION = 'spire.wsgi.app'
-
+import spire.wsgi
 WSGI_APPLICATION = 'spire.wsgi.application'
 
 
