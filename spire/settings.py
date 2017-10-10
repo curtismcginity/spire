@@ -113,7 +113,7 @@ TEMPLATES = [
 
 # from spire.wsgi import application as app
 # WSGI_APPLICATION = 'spire.wsgi.app'
-#import spire.wsgi
+import spire.wsgi
 WSGI_APPLICATION = 'spire.wsgi.application'
 
 
