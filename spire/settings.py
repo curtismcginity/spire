@@ -17,11 +17,13 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    '127.0.0.1',
     'hidden-dawn-44622.herokuapp.com',
+    '.hidden-dawn-44622.herokuapp.com',
     '.hidden-dawn-44622.com',
     '.spire.com',
     'appspire.herokuapp.com',
+    '.appspire.herokuapp.com',
     '.appspire.com',
 ]
 
@@ -55,9 +57,13 @@ SECRET_KEY = 'n=mup+@!w49l!21xn@k0=g$14h^kd0fis-@apr!ycss4a@@mtl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-from configurations import Configuration
-class DevConIV(Configuration):
-    DEBUG = True
+# from configurations import Configuration
+# class DevConIV(Configuration):
+#     DEBUG = True
+
+from django.conf import settings
+# if settings.DEBUG:
+    # Do stuff
 
 
 # Application definition
@@ -107,7 +113,7 @@ TEMPLATES = [
 
 # from spire.wsgi import application as app
 # WSGI_APPLICATION = 'spire.wsgi.app'
-import spire.wsgi
+#import spire.wsgi
 WSGI_APPLICATION = 'spire.wsgi.application'
 
 
@@ -121,10 +127,12 @@ DATABASES = {
 }
 
 # Change 'default' database configuration with $DATABASE_URL.
-# DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-DATABASES['default']['CONN_MAX_AGE'] = 500
+DATABASES['default'].update(dj_database_url.config(conn_max_age=600))
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
