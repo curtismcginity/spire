@@ -1,0 +1,5 @@
+# /spire/spire.gitignore
+
+zzz/**
+
+#spire.env
