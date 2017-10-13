@@ -12,3 +12,6 @@ def contact(request):
 
 def gallery(request):
         return render(request,'gallery.html')
+
+def gallery2(request):
+        return render(request,'gallery1col.html')
