@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^home',v.index, name='home'),
     url(r'^about',v.about, name='about'),
     url(r'^contact',v.contact, name='contact'),
+    url(r'^dr',v.about, name='dr'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
