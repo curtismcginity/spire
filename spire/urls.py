@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^about',v.about, name='about'),
     url(r'^contact',v.contact, name='contact'),
     url(r'^dr',v.about, name='dr'),
-    url(r'^gallery1col',v.gallery2, name='gallery2'),
+    url(r'^testgallery',v.testgallery, name='gallery2'),
     url(r'^gallery',v.gallery, name='gallery'),
 ]
 
