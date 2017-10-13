@@ -17,6 +17,7 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ALLOWED_HOSTS = [
+    'mcginity.io',
     '127.0.0.1',
     'hidden-dawn-44622.herokuapp.com',
     '.hidden-dawn-44622.herokuapp.com',
